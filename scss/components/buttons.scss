@@ -1,0 +1,15 @@
+.button {
+  border-radius: 8px;
+  color: black;
+
+  &__primary {
+    padding: 10px 20px;
+    // background-color: $scondaryColor;
+    @media (max-width: map-get($grid-breakpoints, lg)) {
+      &:hover {
+        // background-color: $primaryColor;
+        color: black;
+      }
+    }
+  }
+}

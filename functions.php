@@ -50,7 +50,9 @@ function garden_setup()
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-			'menu-header' => esc_html__('Header menu', 'start'),
+			'menu-header-left' => esc_html__('Header menu lewo', 'brownhouseandtea'),
+			'menu-header-right' => esc_html__('Header menu prawo', 'brownhouseandtea'),
+			'menu-header-mobile' => esc_html__('Header menu mobile', 'brownhouseandtea'),
 		)
 	);
 

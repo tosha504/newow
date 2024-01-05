@@ -4,18 +4,19 @@
   position: relative;
   cursor: pointer;
   z-index: 6;
+  margin-left: auto;
 
   span {
     display: none;
-    width: 40px;
-    height: 4px;
+    width: 30px;
+    height: 2px;
     background-color: #fff;
     margin: 6px 0;
     transition: 0.4s;
 
     &.active {
       &:nth-child(1) {
-        transform: translate(0, 10px) rotate(-45deg);
+        transform: translate(0, 8px) rotate(-45deg);
       }
 
       &:nth-child(2) {
@@ -23,7 +24,7 @@
       }
 
       &:nth-child(3) {
-        transform: translate(0, -10px) rotate(45deg);
+        transform: translate(0, -8px) rotate(45deg);
       }
     }
 

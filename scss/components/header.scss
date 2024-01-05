@@ -3,22 +3,32 @@
     list-style: none;
   }
   padding: 20px 0;
-  background-color: black;
+  background-color: $blackTheme;
   position: sticky;
   top: 0;
   z-index: 999;
-  .container,
-  &__nav {
+  .container {
     display: flex;
     align-items: center;
     gap: 10px;
+    justify-content: space-between;
 
-    @media (min-width: map-get($grid-breakpoints, md)) {
+    @media (min-width: map-get($grid-breakpoints, lg)) {
+      justify-content: center;
       gap: 30px;
     }
   }
 
-  &__nav {
+  &__nav-right,
+  &__nav-left {
+    display: none;
+
+    @media (min-width: map-get($grid-breakpoints, xl)) {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
     [aria-current] {
       // color: $primaryColor;
       @media (hover: hover) {
@@ -31,14 +41,22 @@
       color: white;
       text-transform: uppercase;
       line-height: 24px;
-      letter-spacing: 0.1em;
       font-size: 13px;
-      font-weight: 400;
+      font-weight: 600;
       @media (hover: hover) {
         &:hover {
           // color: $primaryColor;
         }
       }
+    }
+  }
+
+  &__logo {
+    img {
+      max-width: 100px;
+    }
+    @media (min-width: map-get($grid-breakpoints, xl)) {
+      margin: 0 30px;
     }
   }
 

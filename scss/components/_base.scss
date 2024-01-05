@@ -12,8 +12,8 @@ body {
   width: 100%;
   position: relative;
   font-weight: 300;
-  color: #000;
-  // font-family: $filson;
+  color: $blackTheme;
+  font-family: $mon;
   margin: 0;
   overflow-x: hidden;
   line-height: 1.6;
@@ -26,7 +26,6 @@ h3,
 h4,
 h5,
 h6 {
-  // font-family: $spirit;
   font-weight: 600;
   line-height: 1.4;
 }
@@ -92,4 +91,13 @@ textarea {
 img {
   max-width: 100%;
   height: auto;
+}
+
+a,
+a:active,
+a:hover {
+  outline: none;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 16px;
 }

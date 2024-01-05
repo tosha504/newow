@@ -27,18 +27,40 @@
 
 		<header id="masthead" class="header">
 			<div class="container">
-				<nav id="site-navigation" class="main-navigation">
+				<nav id="site-navigation-left">
+					<?php wp_nav_menu(
+						array(
+							'theme_location' => 'menu-header-left',
+							'container' => false,
+							'menu_id' => 'menu-left',
+							'menu_class' => 'header__nav-left',
+						)
+					);
+					?>
+				</nav><!-- #site-navigation-left -->
+
+				<?php $logo = get_field('logo', 'options_header');
+				if ($logo) { ?>
+					<div class="header__logo">
+						<a href="<?php echo esc_url(home_url('/')) ?>">
+							<?php
+							echo wp_get_attachment_image($logo, 'full'); ?>
+						</a>
+					</div>
+				<?php } ?>
+
+				<nav id="site-navigation-right">
 					<?php
 					wp_nav_menu(
 						array(
-							'theme_location' => 'menu-header',
+							'theme_location' => 'menu-header-right',
 							'container' => false,
-							'menu_id' => 'primary-menu1',
-							'menu_class' => 'header__nav',
-						),
+							'menu_id' => 'menu-right',
+							'menu_class' => 'header__nav-right',
+						)
 					);
 					?>
-				</nav><!-- #site-navigation -->
+				</nav><!-- #site-navigation-right -->
 
 				<button class="burger"
 					aria-label="Open the menu"><span></span><span></span><span></span></button><!-- burger -->
